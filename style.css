@@ -228,6 +228,9 @@ nav ul li a:hover::after {
 }
 
 form input, form textarea {
+  resize: vertical;
+  min-height: 50.8px;
+  max-height: 300px;
   width: 100%;
   border: 0;
   outline: none;
@@ -283,3 +286,23 @@ form .btn2 {
   margin-top: 20px;
 }
 
+#go-up {
+  display: none; /* İlk başta görünmez */
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #0023F5; 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 50%; 
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+#go-up:hover {
+  background-color: #3282F6;
+}
