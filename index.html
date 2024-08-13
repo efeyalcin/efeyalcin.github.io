@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img class="logo" src="my-pictures/logo-1.png">
+
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-text">
+        <p>Development Intern</p>
+        <h1>Hi, I'm <span>Efe</span> Yalçın from <br> Istanbul, Turkey</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        
+        <div class="about-col-1">
+          <div class="picture">
+            <img src="my-pictures/user-2.jpg">
+          </div>
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I'm a student at Firat University. I study on computer science 
+            and I'm trying to stay interested in both software and hardware 
+            of a computer. My goal in my carrier is to merge different fields 
+            like chemistry and computer science. By this purpose the result 
+            might be inventing new ideas and products for better health and 
+            mentality protection. I've worked with Unity, Java and Python before. 
+            I'm also interested in web design and development recently.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents" id="skills">
+            <ul>
+              <li><span>Java</span><br>Fundamentals of Object Oriented Programming</li>
+              <li><span>Python</span><br>Tkinter and Pygame Basics</li>
+              <li><span>Web Development</span><br>Basic HTML, CSS and JS</li>
+              <li><span>Unity</span><br>2D Platform Games</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2023 - 2024</span><br>Gelecegin Muhendisleri Competition</li>
+              <li><span>2022 - 2023</span><br>TUBITAK 2209A</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Fırat University</span><br>Computer Engineering, Bachelor's degree</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio">
+    <div class="container">
+      <div class="portfolio-site">
+        <h1>Portfolio</h1>
+        <a class="main-page" href="#header"><img src="my-pictures/oi.png"></a>
+        
+        <h2>My Website</h2>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1>Contact Me</h1>
+          <p><i class="fa fa-envelope"></i> efety42@gmail.com</p>
+          <p><i class="fa fa-phone"></i> +90 501 344 34 39</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://x.com/" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/efe-tahacan-yal%C3%A7%C4%B1n-a92bab2b9/" target="_blank" class="fa fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form action="https://formspree.io/f/mnnavokq"
+          method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="6" placeholder="Message"></textarea>
+            <button class="btn btn2" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for(tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
+  
+</body>
+</html>
