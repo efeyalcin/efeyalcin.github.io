@@ -282,12 +282,17 @@ form .btn2 {
   text-align: center;
   padding: 25px 0;
   background-color: #262626;
-  font-weight: 300;
-  margin-top: 20px;
+  color: #ababab;
+  font-weight: 100;
+  margin-top: 14px;
+}
+
+.container.cr {
+  margin-bottom: 0;
 }
 
 #go-up {
-  display: none; /* İlk başta görünmez */
+  display: none;
   position: fixed; 
   bottom: 20px; 
   right: 20px; 
